@@ -1,0 +1,13 @@
+<!--
+  List of sidebar links for navigation
+-->
+
+<mat-nav-list>
+
+  <a mat-list-item class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a mat-list-item class="nav-link" routerLink="report" routerLinkActive="active">Report Card</a>
+  <a mat-list-item class="nav-link" routerLink="grade-calc" routerLinkActive="active">Grade Calculator</a>
+  <a mat-list-item class="nav-link">More Coming Soon</a>
+  <a mat-list-item class="nav-link" *ngIf="debug" (click)="deleteSave()">Clear Save</a>
+  
+</mat-nav-list>

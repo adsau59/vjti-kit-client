@@ -1,0 +1,126 @@
+<!--
+  Home page
+  Shows cards with information.              
+-->
+
+<div fxLayout="column" fxLayoutAlign="center center">
+  <div>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="main-title">VJTI Survival Kit</mat-card-title>
+        <mat-card-subtitle>v0.0.1</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Survive the harsh biomes of VJTI with your own survival kit, with all the tedious jobs you need to do along
+          with studies, VJTI kit helps you with a suite of tools which will make your life a bit easy. No ads, no fees,
+          no
+          register to use bs. Simply use what you want whenever you want, totally offline.
+        </p>
+        <p>
+          <strong>Open the sidebar</strong> to check out the tools.<br/>
+          For best experience <strong>Add to Home Screen</strong>
+        </p>
+        <p class="a-default-color">
+          Favicon made by <a href="https://www.freepik.com/" title="Freepik" target="_blank">Freepik</a> is licensed by
+          <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+            BY</a><br />
+          This project is licensed under the <a href="https://github.com/adsau59/vjti-kit-client/blob/master/LICENSE"
+            target="_blank">MIT License</a>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <div [hidden]="!memeLoaded" fxFlexOffset="20px">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Here is a meme for you!</mat-card-title>
+        <mat-card-subtitle>from /r/PewdiepieSubmissions</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{memeUrl}}" (load)="memeHasLoaded()">
+      <mat-card-actions>
+        <a href="https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw" target="_blank"><button mat-button>Subscribe
+            to Pewdiepie</button></a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-md="row" fxFlexOffset.gt-md="20px">
+    <div fxFlexOffset="20px">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Who are we?</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            <i>DefineX Creative Studio</i> developes API, softwares and applications to ease the work and they also
+            develop
+            small games for entertainment of others. Most of the projects build by DCS are open-source.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a href="http://definex.in" target="_blank"><button mat-button>VISIT WEBSITE</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div fxFlexOffset="20px">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Open Source!!!</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            VJTI kit is an open source project with MIT license, so you can use its source code however you desire.
+            Help us adding more useful features for the students of VJTI yet to come, or just create an issue if you
+            encounter any bugs or have a feature request.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a href="https://github.com/adsau59/vjti-kit-client" target="_blank"><button mat-button>GITHUB</button></a>
+          <a href="https://trello.com/b/G2OUuy99/vjti-survival-kit" target="_blank"><button mat-button>ROADMAP</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-md="row" fxFlexOffset.gt-md="20px" style="padding-bottom: 40px;">
+    <div fxFlexOffset="20px">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Support Us</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            This project is not endorsed by VJTI or by anyone. You can support us directly by Donating Us, for
+            alternative methods of donation please contact us on discord.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a href="https://www.paypal.me/AdamSaudagar" target="_blank"><button mat-button>DONATE</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div fxFlexOffset="20px">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Lets Chat</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Contact us directly if you have any query on discord, or you can even send us mail at
+            <a href="mailto:admin@definex.in?Subject=VJTI%20kit%20contact">admin@definex.in</a>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a href="http://discord.definex.in" target="_blank"><button mat-button>DISCORD</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+
+</div>

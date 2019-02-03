@@ -1,27 +1,56 @@
-# PCalcClient
+# <img width="32" src="https://i.postimg.cc/CLk4hnTx/icon.png"/> VJTI Survival Kit
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+<div align="center">
+  <img src="https://i.postimg.cc/vHkvM7Sj/bg.jpg"/>
+</div>
 
-## Development server
+### What is VJTI Survival Kit?
+Suite of tools which will make students life a bit easier.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Survive the harsh biomes of VJTI with your own survival kit, with all the tedious jobs you need to do along with studies, VJTI kit (for short) helps you with a suite of tools which will make your life a bit easy. No ads, no fees, no register to use bs. Simply use what you want whenever you want, totally offline.
 
-## Code scaffolding
+Check the project out on [DefineX](http://vjti.definex.in) or [here](https://vjti-kit-server.herokuapp.com)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Objective
+- Provide a set of tools for students at VJTI which is freely available without any registration, ads walls.
+- To build a solution on which other developers can collaborate and make it better.
 
-## Build
+### Respositories
+- [VJTI kit server](https://github.com/adsau59/vjti-kit-server)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Technology Stack
+VJTI Kit Client is made using,
+- [Angular 7](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [Angular Flex-Layout](https://github.com/angular/flex-layout)
+- [Angular PWA](https://angular.io/guide/service-worker-getting-started)
+- [Cerialize](https://github.com/weichx/cerialize)
 
-## Running unit tests
+VJTI Kit Server is made using,
+- [Python Flask](http://flask.pocoo.org/)
+- [Heroku: Cloud Application Platform](https://www.heroku.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Features
+- **Report Card**, create a report card for yourself to keep your scores in check and to plan ahead.
+- **Grade Calculator**, calculates grade for a subject, contains a form for input and displays output in text
 
-## Running end-to-end tests
+### Roadmap
+You can follow the road map of the project on [Trello](https://trello.com/b/G2OUuy99/vjti-survival-kit)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### How to contribute?
+You can contribute this project by,
+- Using the the solution and creating issue when any bug is encountered.
+- Helping me in the development by bug squashing or developing new features. (If you want to do this, contact me so that we can collaborate.)
+- Let me know if you have any good feature ideas.
 
-## Further help
+### Assets Used
+Icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Contact
+If you have any problems or you want to contact me for feature ideas or want to collaborate in development you can contact me on [DefineX Community discord server](https://discord.gg/V6e2fpc).
+
+### Feeling generous?
+You can donate me on [PayPal](https://www.paypal.me/AdamSaudagar).
+
+### License
+This project is licence to the MIT License, check out the full license over [here](https://github.com/adsau59/vjti-kit-client/blob/master/LICENSE).

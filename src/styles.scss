@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.content {
+  overflow: auto;
+  position: relative;
+}
+
+$bluramount:5px;
+
+.content:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url('assets/bg.jpg');
+  background-size:cover;
+  background-position: center;
+
+  height: 100%;
+
+  -webkit-filter: blur($bluramount);
+  -moz-filter: blur($bluramount);
+  -o-filter: blur($bluramount);
+  -ms-filter: blur($bluramount);
+  filter: blur($bluramount);
+}

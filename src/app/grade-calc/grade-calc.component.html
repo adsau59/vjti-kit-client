@@ -1,0 +1,83 @@
+<!--
+  Grade Calculator HTML
+  Calculates grade for a subject, contains a form for input and displays output in text.
+-->
+
+<div fxLayout="column" fxLayoutAlign="center center">
+
+  <div fxFlex="" fxFlexOffset="20px">
+    <mat-card>
+
+      <mat-card-header>
+        <mat-card-title>Grade Calculator</mat-card-title>
+        <mat-card-subtitle>Check how much marks you need to get the grade you want.</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+
+        <!--
+          Form contains 4 input field: midterm score, end sem score, internals, and highest. The input field are 
+          tracked by their respective [formControl], which is used to access the data run business logic and show output
+
+          Each input field has a <mat-error> tag which displays appropriate error if the field is not valid.
+
+          highest input field also has a <mat-hint> tag which gives a small description for the input field.
+        -->
+        <form class="my-form" [formGroup]="formGroup">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Mid Terms Score" type="number" [formControl]="midTerms" [errorStateMatcher]="matcher" autocomplete="off">
+            <mat-error *ngIf="midTerms.hasError('max') && !midTerms.hasError('required')">
+              Should be out of 30
+            </mat-error>
+            <mat-error *ngIf="midTerms.hasError('required')">
+              Score is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="End Semister Score" type="number" [formControl]="endSem" [errorStateMatcher]="matcher" autocomplete="off">
+            <mat-error *ngIf="endSem.hasError('max') && !endSem.hasError('required')">
+              Should be out of 100
+            </mat-error>
+            <mat-error *ngIf="endSem.hasError('required')">
+              Score is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Internals" type="number" [formControl]="internals" [errorStateMatcher]="matcher" autocomplete="off">
+            <mat-error *ngIf="internals.hasError('max') && !internals.hasError('required')">
+              Should be out of 10
+            </mat-error>
+            <mat-error *ngIf="internals.hasError('required')">
+              Score is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Highest in Class" type="number" [formControl]="highest" [errorStateMatcher]="matcher" autocomplete="off">
+            <mat-hint>
+              Leave empty for absolute score.
+            </mat-hint>
+            <mat-error *ngIf="highest.hasError('max')">
+              Should be out of 10.00
+            </mat-error>
+          </mat-form-field>
+
+          <!--
+            Displays the output after running logic on the input when an update in the form happens.
+          -->
+          <div style="text-align:center;">
+            <p>
+              Out of 10: <b>{{outOf10String}}</b>
+            </p>
+            <p>
+              Grades: <b>{{gradeString}}</b>
+            </p>
+          </div>
+
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

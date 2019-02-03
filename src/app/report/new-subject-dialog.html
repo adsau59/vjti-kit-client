@@ -1,0 +1,36 @@
+<!--
+    New Subject Dialog HTML
+
+    Dialog box to creeate new subject from the edit mode.
+-->
+<h1 mat-dialog-title>Create new subject</h1>
+<div mat-dialog-content>
+    <!--
+        Form to containing 3 input fields for each attribute of the subject,
+        name, grades, credits.
+    -->
+    <form>
+        <p>Subject name</p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="data.subject" name="subject" cdkFocusInitial>
+        </mat-form-field>
+        <p>Grades</p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="data.grades" name="grades">
+        </mat-form-field>
+        <p>Credits</p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="data.credits" type="number" name="credits">
+        </mat-form-field>
+    </form>
+</div>
+
+<!--
+    Two action button,
+    No Thanks: cancels the requests, returns without any data
+    Ok       : returns with data, creates new subject if data provided is valid
+-->
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button class="submit-btn" mat-button [mat-dialog-close]="data">Ok</button>
+</div>
